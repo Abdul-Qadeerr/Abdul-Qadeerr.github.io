@@ -165,32 +165,36 @@
     .btn-ghost:hover { background: var(--green-glow); transform: translateY(-2px); }
 
     /* hero visual */
-    <div class="hero-visual float">
-  <div style="display:flex; flex-direction:column; align-items:center; gap:1.5rem; width:100%; max-width:420px;">
-    <img src="abdulqadeer.png" alt="Abdul Qadeer" 
-      style="width:180px; height:180px; object-fit:cover; border-radius:50%; 
-             border:3px solid var(--green); 
-             box-shadow: 0 0 30px rgba(34,197,94,0.3), 0 0 60px rgba(34,197,94,0.1);">
-    <div class="code-window" style="width:100%;">
-      <div class="code-titlebar">
-        <div class="dot dot-r"></div>
-        <div class="dot dot-y"></div>
-        <div class="dot dot-g"></div>
-        <div class="code-filename">profile.py</div>
-      </div>
-      <div class="code-body">
-        <div><span class="c-comment"># Abdul Qadeer</span></div>
-        <div>&nbsp;</div>
-        <div><span class="c-key">class</span> <span class="c-fn">MLEngineer</span>:</div>
-        <div>&nbsp; <span class="c-key">name</span> = <span class="c-str">"Abdul Qadeer"</span></div>
-        <div>&nbsp; <span class="c-key">role</span> = <span class="c-str">"ML Engineer"</span></div>
-        <div>&nbsp; <span class="c-key">location</span> = <span class="c-str">"Karachi, PK"</span></div>
-        <div>&nbsp; <span class="c-key">cgpa</span> = <span class="c-num">3.02</span></div>
-        <div>&nbsp; <span class="c-key">status</span> = <span class="c-val">✓ open_to_work</span></div>
-      </div>
-    </div>
-  </div>
-</div>
+    .hero-visual {
+      display: flex; justify-content: center; align-items: center;
+      opacity: 0; animation: fadeIn 1s 0.8s forwards;
+    }
+    .code-window {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 60px rgba(34,197,94,0.08);
+      width: 100%; max-width: 420px;
+    }
+    .code-titlebar {
+      background: var(--bg3); padding: 0.8rem 1rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-r { background: #ff5f56; }
+    .dot-y { background: #ffbd2e; }
+    .dot-g { background: #27c93f; }
+    .code-filename { margin-left: auto; font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text3); }
+    .code-body { padding: 1.5rem; font-family: 'Fira Code', monospace; font-size: 0.82rem; line-height: 2; }
+    .c-comment { color: var(--text3); }
+    .c-key { color: #60a5fa; }
+    .c-str { color: #fbbf24; }
+    .c-val { color: var(--green); }
+    .c-fn { color: #c084fc; }
+    .c-num { color: #fb923c; }
+
     /* ── SECTIONS ── */
     section { position: relative; z-index: 1; }
     .container { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; }
